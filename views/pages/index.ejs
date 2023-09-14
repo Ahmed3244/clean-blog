@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('../partials/head.ejs') %>
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+
+    <h2 class="my-5 text-center">Home Page</h2>
+    
+    <% if(students.length > 0) { %>
+
+        <div class="container w-50 mx-auto text-center shadow bg-light p-5">
+        <ul>
+            <% for(let std of students){ %>
+                 <li>
+                    <%= std %>
+                 </li>
+                <% } %>
+        </ul>
+        </div>
+
+        <% } %>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
